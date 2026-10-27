@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Professionnel Plombier | Dr PRESSION</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+    <!-- Écran de connexion Plombier -->
+    <div id="loginScreen" class="admin-login-wrapper">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fa-solid fa-user-shield"></i>
+                <h2>Espace Plombier</h2>
+                <p>HOUNZE JUSTIN - Dr PRESSION</p>
+            </div>
+            <form id="adminLoginForm">
+                <div id="loginError" class="alert-box danger" style="display: none;"></div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="adminUsername">Identifiant</label>
+                    <input type="text" id="adminUsername" required placeholder="Entrer votre Identifiant" autocomplete="off">
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="adminPassword">Mot de passe</label>
+                    <input type="password" id="adminPassword" required placeholder="Entrer votre mot de passe" autocomplete="off">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+            </form>
+            <p style="text-align: center; margin-top: 1.5rem; font-size: 0.85rem;">
+                <a href="index.html">← Retour au site Dr PRESSION</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Interface d'administration -->
+    <div id="dashboardScreen" class="admin-dashboard" style="display: none;">
+        <header class="admin-header">
+            <div class="admin-header-content">
+                <div class="admin-brand">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>Dr PRESSION • Panneau Plombier</span>
+                </div>
+                <div class="admin-user-nav">
+                    <span><i class="fa-solid fa-circle-user"></i> HOUNZE JUSTIN</span>
+                    <button id="logoutBtn" class="btn-logout"><i class="fa-solid fa-power-off"></i> Déconnexion</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="admin-layout">
+            <aside class="conversations-sidebar">
+                <div class="sidebar-header">
+                    <h3>Demandes Clients</h3>
+                    <button id="refreshListBtn" class="btn-icon" title="Rafraîchir"><i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+                <div class="conversations-list" id="conversationsList"></div>
+            </aside>
+
+            <main class="conversation-view" id="conversationView">
+                <div class="no-selection">
+                    <i class="fa-regular fa-comments"></i>
+                    <h3>Sélectionnez une demande client dans la liste</h3>
+                    <p>Vous pourrez voir ses coordonnées et lui répondre en direct.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

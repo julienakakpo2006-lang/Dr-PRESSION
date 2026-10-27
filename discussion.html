@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Discussion Directe | Dr PRESSION</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="discussion.css">
+</head>
+<body class="chat-body">
+
+    <!-- En-tête de la discussion -->
+    <header class="chat-header">
+        <div class="chat-header-container">
+            <a href="index.html" class="btn-back" aria-label="Retourner au site principal">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Accueil</span>
+            </a>
+
+            <div class="artisan-info">
+                <div class="artisan-avatar">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <span class="status-indicator online" title="Artisan disponible"></span>
+                </div>
+                <div>
+                    <h1 class="artisan-name">HOUNZE JUSTIN - Dr PRESSION</h1>
+                    <span class="artisan-sub">Artisan Plombier • Discussion directe</span>
+                </div>
+            </div>
+
+            <div class="chat-header-actions">
+                <a href="tel:+22897779824" class="btn-call" title="Appeler en cas d'urgence"><i class="fa-solid fa-phone"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Zone principale des messages -->
+    <main class="chat-main">
+        <div class="chat-container">
+            <div class="chat-security-banner">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Conversation privée et directe avec votre artisan plombier.</span>
+            </div>
+
+            <div class="messages-area" id="messagesArea">
+                <div class="loading-state">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    <p>Chargement de votre fil de discussion...</p>
+                </div>
+            </div>
+
+            <form class="chat-input-area" id="messageForm">
+                <textarea id="messageInput" placeholder="Écrivez votre message à HOUNZE JUSTIN..." rows="1" required></textarea>
+                <button type="submit" class="btn-send" id="sendBtn" aria-label="Envoyer">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="discussion.js"></script>
+</body>
+</html>
