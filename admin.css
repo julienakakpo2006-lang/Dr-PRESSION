@@ -200,10 +200,58 @@
     background-color: var(--bg-muted);
 }
 
+.admin-reply-bar {
+    padding: 0.85rem 1rem;
+    border-top: 2px solid var(--primary-light); /* Ligne bleue bien visible */
+    display: flex;
+    gap: 0.6rem;
+    background-color: var(--bg-surface); /* Fond blanc pur contrasté */
+    flex-shrink: 0; /* INTERDIT à la boîte de se faire écraser par les messages */
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06); /* Ombre pour la faire ressortir */
+    z-index: 10;
+}
+
 .admin-reply-bar input {
     flex: 1;
-    padding: 0.75rem 1rem;
+    padding: 0.8rem 1rem;
     border-radius: var(--radius-sm);
     border: 1.5px solid var(--border-color);
+    background-color: var(--bg-main);
+    color: var(--text-main);
     outline: none;
+    font-size: 0.95rem;
+}
+
+.admin-reply-bar input:focus {
+    border-color: var(--primary);
+    background-color: var(--bg-surface);
+}
+
+.admin-reply-bar button {
+    flex-shrink: 0;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+/* ==========================================================================
+   CORRECTIF ADMIN MOBILE (≤ 480px)
+   ========================================================================== */
+@media screen and (max-width: 480px) {
+    .admin-header {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .admin-brand span {
+        font-size: 0.95rem;
+    }
+
+    /* On masque le nom sur mobile pour laisser la place au bouton Déconnexion */
+    .admin-user-nav span {
+        display: none;
+    }
+
+    .btn-logout {
+        padding: 0.35rem 0.65rem;
+        font-size: 0.8rem;
+    }
 }

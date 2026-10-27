@@ -239,3 +239,50 @@
     background-color: var(--primary-hover);
     transform: scale(1.05);
 }
+/* ==========================================================================
+   CORRECTIF DISCUSSION MOBILE (≤ 480px)
+   ========================================================================== */
+@media screen and (max-width: 480px) {
+    .chat-header-container {
+        gap: 0.5rem;
+    }
+
+    /* On masque le mot "Accueil" pour ne garder que la flèche retour */
+    .btn-back span {
+        display: none;
+    }
+
+    .btn-back {
+        padding: 0.5rem;
+        width: 36px;
+        height: 36px;
+        justify-content: center;
+    }
+
+    /* On réduit l'avatar */
+    .artisan-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+
+    /* On tronque le nom s'il est trop long au lieu de faire déborder */
+    .artisan-name {
+        font-size: 0.88rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 180px;
+    }
+
+    /* On masque la deuxième ligne sur très petit écran */
+    .artisan-sub {
+        display: none;
+    }
+
+    .btn-call {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+    }
+}
